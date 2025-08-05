@@ -83,10 +83,10 @@ function App(): JSX.Element {
           requestId={csrfInfo.requestId}
           timestamp={csrfInfo.timestamp}
         />
-        <h3>Want more{chainId === 100 ? '?' : ' on Gnosis Chain?'}</h3>
+        <h3>Learn More About Dusk</h3>
         <ul>
-          <li>on-ramp fiat via <a href="https://uramp.gnosis.io/"  rel="noreferrer" target="_blank">uramp.gnosis.io</a></li>
-          <li><a href="https://bridge.gnosischain.com/"  rel="noreferrer" target="_blank">bridge</a> assets from Ethereum</li>
+          <li>Visit our <a href="https://dusk.network/" target="_blank" rel="noopener noreferrer">Homepage</a> for news and updates</li>
+          <li>Explore the <a href="https://docs.dusk.network/" target="_blank" rel="noopener noreferrer">Documentation</a> for DuskEVM guides</li>
         </ul>
       </div>
       {loading && <Loading/>}
