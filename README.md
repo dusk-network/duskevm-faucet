@@ -1,6 +1,6 @@
-# Faucet-Py
+# DuskEVM Faucet
 
-A simple python implementation of an EVM compatible faucet.
+A simple Python backend and React frontend implementation of an EVM compatible faucet, forked from [Gnosis faucet-py](https://github.com/gnosischain/faucet-py/).
 
 ## Python API
 
@@ -63,8 +63,8 @@ Samples below:
 
 ```
 cd /api
-flask -A api create_enabled_token GNO 10200 0x19C653Da7c37c66208fbfbE8908A5051B57b4C70 0.01 erc20
-flask -A api create_enabled_token xDAI 10200 0x0000000000000000000000000000000000000000 0.01 native
+flask -A api create_enabled_token LINK 745 0x19C653Da7c37c66208fbfbE8908A5051B57b4C70 0.01 erc20
+flask -A api create_enabled_token DUSK 745 0x0000000000000000000000000000000000000000 0.01 native
 ```
 
 Once enabled, the token will appear in the list of enabled tokens on the endpoint `api/v1/info`.
@@ -81,7 +81,6 @@ cd /api
 flask -A api create_access_keys
 ```
 
-
 #### Change maximum daily amounts per user
 
 If you want to change the amount you are giving out for a specific token, make sure you have sqlite
@@ -89,8 +88,8 @@ installed on the server, e.g. apk update && apk add sqlite.
 
 Enter the database: `sqlite path/to/database`
 
-Search for the token to update: `select chain_id, max_amount_day from tokens where name = 'xDAI'`
-Update amount: `update tokens set max_amount_day = 0.00015 where chain_id = 100;`
+Search for the token to update: `select chain_id, max_amount_day from tokens where name = 'DUSK'`
+Update amount: `update tokens set max_amount_day = 0.00015 where chain_id = 745;`
 
 ## ReactJS Frontend
 
@@ -114,13 +113,11 @@ cd app
 yarn start
 ```
 
-
 ### Docker Compose Up and create Access keys
 
 If you do not reset the volume you will be able to reuse the sqlite database with latest data (access keys and enabled tokens)
 
 ```
-
 docker-compose up --build -d
 
 docker ps
@@ -129,9 +126,7 @@ docker exec -it <container_name_or_id> /bin/bash
 
 docker exec -it <container_name_or_id> flask -A api create_access_keys
 
-docker exec -it <container_name_or_id> flask -A api create_enabled_token xDAI 100 0x0000000000000000000000000000000000000000 0.01 native
+docker exec -it <container_name_or_id> flask -A api create_enabled_token DUSK 100 0x0000000000000000000000000000000000000000 0.01 native
 
 docker logs -f <container_name_or_id>
-
 ```
-
