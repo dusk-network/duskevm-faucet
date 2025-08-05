@@ -1,20 +1,5 @@
-@font-face {
-  font-family: "GT Planar";
-  src: url("../fonts/GT-Planar-Regular.woff2") format("woff2"),
-    url("../fonts/GT-Planar-Regular.woff") format("woff")
-    url("../fonts/GT-Planar-Regular.ttf") format("true-type");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Maxi Round";
-  src: url("../fonts/ABCMaxiRound-Regular.otf") format("opentype");
-}
-
-
 .app-logo {
-  max-height: 30px;
+  max-height: 80px;
   pointer-events: none;
   margin: 15px 10px;
   align-self: flex-start;
@@ -22,13 +7,13 @@
 
 @media (max-width: 520px) {
   .app-logo {
-    max-height: 20px;
+    max-height: 80px;
   }
 }
 
 .Toastify__toast {
   font-size: 16px;
-  font-family: "GT Planar", Helvetica, Arial, sans-serif !important;
+  font-family: Helvetica, Arial, sans-serif !important;
 }
 
 .Toastify__close-button {
@@ -39,12 +24,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "GT Planar", sans-serif;
-  background-image: url("../images/Faucet_BG.jpg");
+  background-image: url("../images/background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: contrast(0.5);
+  background-color: #101010;
+  backdrop-filter: contrast(0.7);
   padding: 10px;
   min-height: 100vh;
   box-sizing: border-box;
@@ -62,23 +47,20 @@
 }
 
 .title {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .title h1,
 .title h2 {
   margin-top: 0;
   margin-bottom: 0;
-  color: #F0EBDE;
   text-align: center;
   font-weight: normal;
 }
 
 .title h1 {
-  font-family: "Maxi Round", sans-serif;
   font-size: 4.5rem;
-  text-transform: uppercase;
 }
 
 .title h2 {
@@ -96,17 +78,13 @@
 }
 
 h3 {
-  /* font-family: "Maxi Round", sans-serif; */
   font-size: 1.6rem;
-  color: white;
-  color: #F0EBDE;
   font-weight: normal;
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
 ul {
-  color: white;
   font-size: 1rem;
   margin-top: 0;
   list-style: circle;
@@ -117,5 +95,5 @@ li {
 }
 
 li a {
-  color: white;
+  color: #FFF;
 }

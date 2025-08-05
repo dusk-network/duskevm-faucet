@@ -3,10 +3,9 @@
   flex-direction: column;
   align-items: flex-end;
   max-width: 500px;
-  background: rgba(62, 105, 87, 0.7);
+  background: rgba(46, 45, 48, 0.4);
   border-radius: 10px;
   padding: 40px;
-  color: white;
   font-size: 1rem;
 }
 
@@ -40,7 +39,6 @@
   padding-left: 12px;
   padding-right: 12px;
   font-size: 1rem;
-  font-family: "GT Planar", sans-serif;
   box-sizing: border-box;
   height: 100%;
 }
@@ -99,22 +97,20 @@ strong {
   height: 56px;
   border-radius: 10px;
   border: none;
-  background-color: #DD7143;
-  color: white;
+  background-color: #71b1ff;
   font-size: 1.3rem;
-  font-family: "GT Planar", sans-serif;
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
 }
 
 .faucet-container button:hover {
-  background-color: #f0713b;
+  background-color: #0b79ff;
   cursor: pointer;
 }
 
 .faucet-container button:disabled {
-  background-color: #dd71439e;
+  background-color: #a4cdff;
 }
 
 .success {
