@@ -13,7 +13,7 @@ headers = {
 json_data = {
     'tokenAddress': '0x0000000000000000000000000000000000000000',  # stands for Native token
     'amount': 0.01,
-    'chainId': 10200,
+    'chainId': 745,
     'recipient': '0xf8d0b3c2578aee1fceb9830eb92b5da007d71ba9'
 }
 

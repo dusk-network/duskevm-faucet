@@ -43,7 +43,7 @@ class TestDatabase(BaseTest):
 
         config = AccessKeyConfig()
         config.access_key_id = access_key.access_key_id
-        config.chain_id = 10200
+        config.chain_id = 745
         config.erc20_max_amount_day = 10
         config.native_max_amount_day = 20
         config.save()
@@ -52,7 +52,7 @@ class TestDatabase(BaseTest):
         with self.assertRaises(IntegrityError):
             config = AccessKeyConfig()
             config.access_key_id = access_key.access_key_id
-            config.chain_id = 10200
+            config.chain_id = 745
             config.erc20_max_amount_day = 5
             config.native_max_amount_day = 10
             config.save()
