@@ -14,12 +14,12 @@ interface CSRFInfo {
 }
 
 const chainName:{ [key: string]: string }= {
-  100: "Gnosis",
-  10200: "Chiado"
+  744: "DuskEVM",
+  745: "DuskEVM"
 }
 
 function App(): JSX.Element {
-  const [chainId, setChainId] = useState(10200)
+  const [chainId, setChainId] = useState(745)
   const [loading, setLoading] = useState(true)
   const [enabledTokens, setEnabledTokens] = useState([])
   const [faucetLoading, setFaucetLoading] = useState(true)
@@ -53,10 +53,10 @@ function App(): JSX.Element {
       })
   }, [])
 
-  const title = faucetLoading ? "FAUCET" : `${chainName[chainId]} CHAIN`
+  const title = faucetLoading ? "FAUCET" : `${chainName[chainId]}`
   const subtitle = faucetLoading
     ? "Application loading..."
-    : (chainId === 100 ? "Faucet" : "Testnet Faucet")
+    : (chainId === 744 ? "Faucet" : "Testnet Faucet")
   
   return (
     <>

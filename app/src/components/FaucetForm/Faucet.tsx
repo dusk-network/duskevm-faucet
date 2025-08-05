@@ -16,8 +16,8 @@ interface FaucetProps {
 }
 
 const blockscanner:{ [key: string]: string }= {
-  100: "https://gnosisscan.io/tx/",
-  10200: "https://gnosis-chiado.blockscout.com/tx/"
+  744: "https://blockscout.evm.dusk.network/",
+  745: "https://l2-blockscout.evm-test.dusk.network/"
 }
 
 function Faucet({ enabledTokens, chainId, setLoading, csrfToken, requestId, timestamp }: FaucetProps): JSX.Element {
