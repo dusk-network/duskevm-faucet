@@ -51,7 +51,9 @@ function TokenSelect ({ enabledTokens, token, setToken, windowWidth }: TokenSele
       ...provided,
       height: "56px",
       width: windowWidth > 520 ? "303px" : "auto",
-      border: "none"
+      border: "none",
+      borderRadius: "28px",
+      paddingLeft: "10px"
     })
   }
 
